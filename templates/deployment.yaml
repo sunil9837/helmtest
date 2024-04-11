@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: nginx-deployment-${BP_IMAGE_TAG}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: nginx
+      app: nginx-${BP_IMAGE_TAG}
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginx-${BP_IMAGE_TAG}
     spec:
       containers:
         - name: nginx
