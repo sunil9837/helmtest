@@ -1,6 +1,6 @@
-replicaCount: 3
+replicaCount: 1
 image:
-  repository: nginx
+  repository: https://905418475251.dkr.ecr.us-east-1.amazonaws.com/moonfrog-test
   tag: ${BP_IMAGE_TAG}
   pullPolicy: IfNotPresent
 
